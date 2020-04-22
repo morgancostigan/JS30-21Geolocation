@@ -66,7 +66,7 @@
       //there is also getCurrentPosition(), but that gives you a single response, where watchPosition continuosly refreshes
       console.log(data);
       speed.textContent = data.coords.speed; 
-      arrow.style.transform = `rotate(20deg)`;
+      arrow.style.transform = `rotate(${data.coords.heading}deg)`;
     }); 
 
   </script>
