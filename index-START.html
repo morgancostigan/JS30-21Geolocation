@@ -62,7 +62,10 @@
     const arrow = document.querySelector('.arrow');
     const speed = document.querySelector('.speed-value');
 
-    navigator.geolocation.watchPosition(); //there is also getCurrentPosition(), but that gives you a single response, where watchPosition continuosly refreshes
+    navigator.geolocation.watchPosition((data) => {
+      console.log(data);
+      
+    }); //there is also getCurrentPosition(), but that gives you a single response, where watchPosition continuosly refreshes
 
 
   </script>
