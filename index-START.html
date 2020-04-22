@@ -63,10 +63,11 @@
     const speed = document.querySelector('.speed-value');
 
     navigator.geolocation.watchPosition((data) => {
+      //there is also getCurrentPosition(), but that gives you a single response, where watchPosition continuosly refreshes
       console.log(data);
-      
-    }); //there is also getCurrentPosition(), but that gives you a single response, where watchPosition continuosly refreshes
-
+      speed.textContent = data.coords.speed; 
+      arrow.style.transform = `rotate(20deg)`;
+    }); 
 
   </script>
 </body>
